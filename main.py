@@ -6,8 +6,8 @@ def send_message():
     messages = ['Good morning Saidhbh', 'Good morning :)', 'Not awake rn but ']
 
     res = requests.post('https://textbelt.com/text', {
-        'phone': '+353857517853',
-        'message': 'Good morning Saidhbh',
+        'phone': num,
+        'message': messages,
         'key': 'textbelt',
     })
     print(res.json())
