@@ -21,10 +21,8 @@ def send_message():
     return schedule.CancelJob
 
 def next_time():
-    time_str = '{:02d}:{:02d}'.format(7, random.randint(0, 59))
     schedule.clear()
-    print("Scheduled for {}".format(time_str))
-    schedule.every().day.at(time_str).do(send_message)
+    schedule.every().day.at("7:00").do(send_message)
 
 next_time()
 
